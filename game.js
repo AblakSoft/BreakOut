@@ -7,11 +7,11 @@ var lives = 3;
 
 var ballX = canvas.width/2;
 var ballY = canvas.height-30;
-var dx = -1.5;
-var dy = -3;
-
+var dx = -2;
+var dy = -4;
 var ballRadius = 10;
 var color = getRandomColor();
+//var color = "#eee";
 
 var paddleWidth = 75;
 var paddleHeight = 10;
@@ -54,7 +54,7 @@ function draw() {
         alert("You won!");
         document.location.reload(true);
     }
-    requestAnimationFrame(draw);
+    requestAnimationFrame(draw,5);
 }
 
 function drawScore(){
@@ -126,8 +126,8 @@ function drawBall() {
             } else {
                 ballX = canvas.width/2;
                 ballY = canvas.height-30;
-                dx = 2;
-                dy = -2;
+                dx = -2;
+                dy = -4
                 paddleX = (canvas.width-paddleWidth)/2;
             }
         }
